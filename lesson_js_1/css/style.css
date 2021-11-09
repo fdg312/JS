@@ -1,0 +1,19 @@
+body{
+    padding: 30px;
+}
+
+.bg{
+    background: greenyellow !important; 
+    color: rgb(202, 50, 50) !important;
+}
+
+.container{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(202, 50, 50);
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: greenyellow;
+}
