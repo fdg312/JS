@@ -16,3 +16,16 @@ container.addEventListener('click', function(){
 
     
 })
+
+
+let money = 3
+
+let income = 4
+
+let addExpenses = 5
+
+let deposit = 6
+
+let mission = 'ghb'
+
+let period = true
