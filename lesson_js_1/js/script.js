@@ -1,31 +1,22 @@
-let container = document.querySelector('.container');
-let bg = document.querySelector('.bg');
+let money = 100;
 
-console.log('Hello')
+let income = "фриланс";
 
-container.addEventListener('click', function(){
-    const confir = confirm('Вы уверены?')
-    
-    if(confir == true){
-        container.classList.toggle('bg')
-    }
-    else{
-        let a = 3
-    }
+let addExpenses = "Еда, карандаши, трамвай";
 
+let deposit = true;
 
-    
-})
+let mission = 123321;
 
+let period = 7;
 
-let money = 3
+console.log(money, income, deposit);
+console.log(income.length);
+console.log(`Период ${period}`);
+console.log(`Цель заработать ${mission} долларов`);
+console.log(addExpenses.toLocaleLowerCase().split(','));
 
-let income = 4
+let budgetDay = money / 30;
 
-let addExpenses = 5
+console.log(bugetDay, money%30);
 
-let deposit = 6
-
-let mission = 'ghb'
-
-let period = true
