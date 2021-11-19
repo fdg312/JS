@@ -17,13 +17,13 @@ const expensesAmount2 = prompt('Во сколько это обойдется?')
 let expensesAmount = expensesAmount1 + expensesAmount2;
 let budgetMonth = money - expensesAmount;
 
-console.log(budgetMonth);
+console.log(`Бюджет за месяц ${budgetMonth}`);
 
-let mission = 1000000
+let mission = 100000000
 
-console.log(Math.floor(mission / (money - budgetMonth)) + 1);
+console.log(`Сколько осталось месяцев до цели ${Math.floor(mission / (money - budgetMonth)) + 1}`);
 
-let budgetDay = Math.floor(budgetMonth / 30)
+budgetDay = Math.floor(budgetMonth / 30)
 
 if (budgetDay > 800){
     console.log('Высокий уровень дохода');
