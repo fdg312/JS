@@ -1,22 +1,44 @@
-let money = 100;
+"use strict"
 
-let income = "фриланс";
+const money = prompt('Ваш месячный доход?');
+const addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую'.split(','));
+const deposit = confirm('Есть ли у вас депозит в банке?');
 
-let addExpenses = "Еда, карандаши, трамвай";
+console.log(typeof money);
+console.log(typeof addExpenses);
+console.log(typeof deposit);
 
-let deposit = true;
+const expenses1 = prompt('Какие обязательные ежемесячные расходы у вас есть?');
+const expensesAmount1 = prompt('Во сколько это обойдется?');
 
-let mission = 123321;
+const expenses2 = prompt('Какие обязательные ежемесячные расходы у вас есть?');
+const expensesAmount2 = prompt('Во сколько это обойдется?');
 
-let period = 7;
+let expensesAmount = expensesAmount1 + expensesAmount2;
+let budgetMonth = money - expensesAmount;
 
-console.log(money, income, deposit);
-console.log(income.length);
-console.log(`Период ${period}`);
-console.log(`Цель заработать ${mission} долларов`);
-console.log(addExpenses.toLocaleLowerCase().split(','));
+console.log(budgetMonth);
 
-let budgetDay = money / 30;
+let mission = 1000000
 
-console.log(budgetDay, money%30);
+console.log(Math.floor(mission / (money - budgetMonth)) + 1);
+
+budgetDay = Math.floor(budgetMonth / 30)
+
+if (budgetDay > 800){
+    console.log('Высокий уровень дохода');
+}
+
+else if (800 > budgetDay > 300){
+    console.log('Средний уровень дохода');
+}
+
+else if (300 > budgetDay > 0){
+    console.log('Низкий уровень дохода');
+}
+
+else if (0 > budgetDay){
+    console.log('Что то пошло не так');
+}
+
 
