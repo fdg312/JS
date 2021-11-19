@@ -23,7 +23,7 @@ let mission = 1000000
 
 console.log(Math.floor(mission / (money - budgetMonth)) + 1);
 
-budgetDay = Math.floor(budgetMonth / 30)
+let budgetDay = Math.floor(budgetMonth / 30)
 
 if (budgetDay > 800){
     console.log('Высокий уровень дохода');
