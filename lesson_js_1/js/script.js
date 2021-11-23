@@ -43,30 +43,26 @@ function getTargetMonth() {
 console.log(getTargetMonth());
 
 
+function getStatusIncome() {
 
+    if (budgetDay > 800){
+        return('Высокий уровень дохода');
+    }
 
+    else if (budgetDay > 800 && budgetDay > 300){
+        return('Средний уровень дохода');
+    }
 
+    else if (budgetDay < 300 && budgetDay > 0){
+        return('Низкий уровень дохода');
+    }
 
-// function getStatusIncome() {
+    else if (0 > budgetDay){
+        return('Что то пошло не так');
+    }
+}
 
-//     if (budgetDay > 800){
-//         return('Высокий уровень дохода');
-//     }
-
-//     else if (budgetDay > 800 && budgetDay > 300){
-//         return('Средний уровень дохода');
-//     }
-
-//     else if (budgetDay > 300 && budgetDay > 0){
-//         return('Низкий уровень дохода');
-//     }
-
-//     else if (0 > budgetDay){
-//         return('Что то пошло не так');
-//     }
-// }
-// console.log(getStatusIncome())
-
+console.log(getStatusIncome());
 
 
 
