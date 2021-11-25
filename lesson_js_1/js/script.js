@@ -1,30 +1,50 @@
 "use strict"
 
-const money = +prompt('Ваш месячный доход?', 5000);
+let money;
+
+function start() {
+    do {
+        money = +prompt('Ваш месячный доход?', 5000);
+
+    } while (isNaN(money)  || money === '' || money === 0);
+}
+
+start();
+
 const addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую', 'еда, обучение');
 const deposit = confirm('Есть ли у вас депозит в банке?');
 
 console.log(addExpenses.split(','));
 
-function type(word) {
+function wordype(word) {
     return typeof word
 }
 
-console.log(type(money));
-console.log(type(addExpenses));
-console.log(type(deposit));
-
-const expenses1 = prompt('Какие обязательные ежемесячные расходы у вас есть?');
-const expensesAmount1 = +prompt('Во сколько это обойдется?', 500);
-
-const expenses2 = prompt('Какие обязательные ежемесячные расходы у вас есть?');
-const expensesAmount2 = +prompt('Во сколько это обойдется?', 500);
+console.log(wordype(money));
+console.log(wordype(addExpenses));
+console.log(wordype(deposit));
 
 function getExpensesMonth() {
-    return(expensesAmount1 + expensesAmount2)
+
+    let sum = 0;
+
+    for (let i = 0; i < 2; i++) {
+        
+        if (i === 0) {
+            prompt('Какие обязательные ежемесячные расходы у вас есть?');
+        }
+        else{
+            prompt('Какие обязательные ежемесячные расходы у вас есть?');
+        }
+
+        sum += +prompt('Во сколько это обойдется?', 500);
+    }
+
+    return sum;
 }
 
 function getAccumulatedMonth() {
+
     return(money - getExpensesMonth())
 }
 
@@ -37,7 +57,16 @@ let mission = 8000
 let budgetDay = Math.floor(accumulatedMonth / 30)
 
 function getTargetMonth() {
-    return(`Сколько осталось месяцев до цели ${Math.ceil(mission / accumulatedMonth)}`)
+    let target = Math.ceil(mission / accumulatedMonth)
+
+    if (target > 0) {
+        console.log('Цель будет достигнута!');
+        return (`Сколько месяцев осталось до цели: ${target}`)
+    }else{
+        return ('Цель не будет достигнута!')
+    }
+
+
 }
 
 console.log(getTargetMonth());
